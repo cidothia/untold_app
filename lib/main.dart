@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:untold_app/src/app.dart';
+import 'package:untold_app/src/settings/settings_controller.dart';
+import 'package:untold_app/src/settings/settings_service.dart';
 
-import 'src/app.dart';
-import 'src/settings/settings_controller.dart';
-import 'src/settings/settings_service.dart';
-
+// ignore: avoid_void_async
 void main() async {
   // Set up the SettingsController, which will glue user settings to multiple
   // Flutter Widgets.
