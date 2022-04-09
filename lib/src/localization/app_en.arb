@@ -1,6 +1,14 @@
 {
+  "@@locale": "en",
   "appTitle": "untold_app",
   "@appTitle": {
     "description": "The title of the application"
+  },
+  "sampleItemsTitle": "Sample Items",
+  "sampleItemTitle": "SampleItem {id}",
+  "@sampleItemTitle": {
+    "placeholders": {
+      "id": {}
+    }
   }
 }

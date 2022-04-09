@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../settings/settings_view.dart';
-import 'sample_item.dart';
-import 'sample_item_details_view.dart';
+import 'package:untold_app/src/localization/i18n.dart';
+import 'package:untold_app/src/sample_feature/sample_item.dart';
+import 'package:untold_app/src/sample_feature/sample_item_details_view.dart';
+import 'package:untold_app/src/settings/settings_view.dart';
 
 /// Displays a list of SampleItems.
 class SampleItemListView extends StatelessWidget {
@@ -19,7 +19,7 @@ class SampleItemListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sample Items'),
+        title: Text(i18nInj.of(context).sampleItemsTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -43,16 +43,16 @@ class SampleItemListView extends StatelessWidget {
         // Providing a restorationId allows the ListView to restore the
         // scroll position when a user leaves and returns to the app after it
         // has been killed while running in the background.
-        restorationId: 'sampleItemListView',
+        restorationId: kSampleItemListViewID,
         itemCount: items.length,
         itemBuilder: (BuildContext context, int index) {
           final item = items[index];
 
           return ListTile(
-            title: Text('SampleItem ${item.id}'),
+            title: Text(i18nInj.of(context).sampleItemTitle(item.id)),
             leading: const CircleAvatar(
               // Display the Flutter Logo image asset.
-              foregroundImage: AssetImage('assets/images/flutter_logo.png'),
+              foregroundImage: AssetImage(kFlutterAsset),
             ),
             onTap: () {
               // Navigate to the details page. If the user leaves and returns to
@@ -62,10 +62,13 @@ class SampleItemListView extends StatelessWidget {
                 context,
                 SampleItemDetailsView.routeName,
               );
-            }
+            },
           );
         },
       ),
     );
   }
 }
+
+const String kSampleItemListViewID = 'sampleItemListView';
+const String kFlutterAsset = 'assets/images/flutter_logo.png';
