@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "269404153699",
+    "project_id": "untold-rpg",
+    "storage_bucket": "untold-rpg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269404153699:android:aed577ad5df4c4525c1556",
+        "android_client_info": {
+          "package_name": "tech.cidothia.untold_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269404153699-9fru131ua9p2f2bf602gfcaukr1ibh32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCptSVa1zCeFiZFjvZlwv_4fx5gGdfVa7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269404153699-9fru131ua9p2f2bf602gfcaukr1ibh32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
